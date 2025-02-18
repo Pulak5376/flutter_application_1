@@ -17,19 +17,20 @@ class LabClass05 extends StatelessWidget {
             backgroundColor: Colors.blue,
             centerTitle: true,
           ),
-          body: Row(
-            children: [
-              Icon(Icons.star,
-                  size: 50, color: const Color.fromARGB(210, 129, 34, 180)),
-              Icon(Icons.star,
-                  size: 50, color: const Color.fromARGB(210, 135, 13, 98)),
-              Icon(Icons.star,
-                  size: 50, color: const Color.fromARGB(210, 57, 42, 52)),
-              Icon(Icons.star,
-                  size: 50, color: const Color.fromARGB(210, 172, 47, 134)),
-              Icon(Icons.star,
-                  size: 50, color: const Color.fromARGB(41, 185, 33, 140)),
-            ],
+          body: Container(
+            height: double.infinity,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Icon(Icons.contact_emergency,
+                    size: 50, color: const Color.fromARGB(210, 0, 68, 255)),
+                Icon(Icons.home,
+                    size: 50, color: const Color.fromARGB(210, 255, 0, 0)),
+                Icon(Icons.map,
+                    size: 50, color: const Color.fromARGB(210, 190, 19, 220)),
+              ],
+            ),
           ),
         ));
   }
