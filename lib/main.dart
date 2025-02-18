@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const LabClass05());
 }
-
 class LabClass05 extends StatelessWidget {
   const LabClass05({super.key});
 
@@ -17,19 +16,23 @@ class LabClass05 extends StatelessWidget {
             backgroundColor: Colors.blue,
             centerTitle: true,
           ),
-          body: Container(
-            height: double.infinity,
+          body: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Icon(Icons.contact_emergency,
-                    size: 50, color: const Color.fromARGB(210, 0, 68, 255)),
-                Icon(Icons.home,
-                    size: 50, color: const Color.fromARGB(210, 255, 0, 0)),
-                Icon(Icons.map,
-                    size: 50, color: const Color.fromARGB(210, 190, 19, 220)),
-              ],
+              children:List.generate(
+                100,
+                (index) => Icon(
+                  Iconsax.activity,
+                  size: index.toDouble(),
+                  color: const color.fromARGB(255,21,0,255)
+                )
+              )
+            )
+          )
+            
+          
             ),
           ),
         ));
